@@ -1,0 +1,123 @@
+[
+  {
+    "title": "gin & tonic",
+    "code": "GNT",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "gin",
+        "quantity": "1"
+      }
+    ]
+  },
+  {
+    "title": "margerita",
+    "code": "MARG",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "cuba libre",
+    "code": "CULI",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "rum",
+        "quantity": "1"
+      }
+    ]
+  },
+  {
+    "title": "old fashioned",
+    "code": "OFASH",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "whiskey",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "martini",
+    "code": "MART",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "moscow mule",
+    "code": "MULE",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "manhattan",
+    "code": "MHAT",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "cosmopolitan",
+    "code": "COSMO",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "mojito",
+    "code": "MOTO",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "bloody mary",
+    "code": "BMAR",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "title": "mimosa",
+    "code": "MIM",
+    "startPrice": 5.0,
+    "alcohol": [
+      {
+        "title": "tequila",
+        "quantity": "2"
+      }
+    ]
+  }
+]
