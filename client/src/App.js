@@ -2,14 +2,14 @@ import React, { Component } from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 //  views
-import Main from "./views/Main"
+import Dashboard from "./views/Dashboard"
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Main} />
+          <Route path="/" component={Dashboard} />
         </Switch>
       </BrowserRouter>
     )

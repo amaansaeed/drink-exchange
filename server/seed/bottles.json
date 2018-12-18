@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Absolut Vodka",
+    "type": "Vodka",
+    "stock": 20,
+    "price": 23.45
+  },
+  {
+    "title": "Captain Morgan",
+    "type": "Rum",
+    "stock": 20,
+    "price": 23.45
+  },
+  {
+    "title": "Johnny Walker - Black Label",
+    "type": "Whiskey",
+    "stock": 20,
+    "price": 23.45
+  },
+  {
+    "title": "London Dry Gin",
+    "type": "Gin",
+    "stock": 20,
+    "price": 23.45
+  },
+  {
+    "title": "El Jimador",
+    "type": "Tequila",
+    "stock": 20,
+    "price": 23.45
+  }
+]

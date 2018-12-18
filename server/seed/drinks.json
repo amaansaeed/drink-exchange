@@ -2,7 +2,8 @@
   {
     "title": "gin & tonic",
     "code": "GNT",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "gin",
@@ -13,7 +14,8 @@
   {
     "title": "margerita",
     "code": "MARG",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -24,7 +26,8 @@
   {
     "title": "cuba libre",
     "code": "CULI",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "rum",
@@ -35,7 +38,8 @@
   {
     "title": "old fashioned",
     "code": "OFASH",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "whiskey",
@@ -46,7 +50,8 @@
   {
     "title": "martini",
     "code": "MART",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -57,7 +62,8 @@
   {
     "title": "moscow mule",
     "code": "MULE",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -68,7 +74,8 @@
   {
     "title": "manhattan",
     "code": "MHAT",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -78,8 +85,9 @@
   },
   {
     "title": "cosmopolitan",
-    "code": "COSMO",
-    "startPrice": 5.0,
+    "code": "CSMO",
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -90,7 +98,8 @@
   {
     "title": "mojito",
     "code": "MOTO",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -101,7 +110,8 @@
   {
     "title": "bloody mary",
     "code": "BMAR",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
@@ -112,7 +122,8 @@
   {
     "title": "mimosa",
     "code": "MIM",
-    "startPrice": 5.0,
+    "price": 5.0,
+    "sold": 0,
     "alcohol": [
       {
         "title": "tequila",
