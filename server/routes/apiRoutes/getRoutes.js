@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 //  Controllers
-const { getDrinks, getBottles, getLists } = require("../controllers/request")
+const { getDrinks, getBottles, getLists } = require("../../controllers/request")
 
 router.get("/drinks", async (req, res) => {
   const drinks = await getDrinks()

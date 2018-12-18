@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import http from "../services/http"
+import io from "socket.io-client"
 
 //  components
 import Controller from "../components/Controller"
@@ -14,10 +15,26 @@ class ControllerContainer extends Component {
   }
 
   handleClick = selection => {
-    if (selection === "buy") {
-      console.log(`Buy drink: ${this.state.selectedDrink}`)
-    } else if (selection === "sell") {
-      console.log(`Sell bottle: ${this.state.selectedBottle}`)
+    const { selectedDrink, selectedBottle } = this.state
+
+    if (selection === "buy" && selectedDrink.length > 1) {
+      console.log(`Buy drink: ${selectedDrink}`)
+      http({
+        method: "post",
+        baseURL: process.env.REACT_APP_API_ENDPOINT,
+        url: "/trade",
+        params: { action: "buy" },
+        data: { drink: selectedDrink }
+      })
+    } else if (selection === "sell" && selectedBottle.length > 1) {
+      console.log(`Sell bottle: ${selectedBottle}`)
+      http({
+        method: "post",
+        baseURL: process.env.REACT_APP_API_ENDPOINT,
+        url: "/trade",
+        params: { action: "sell" },
+        data: { bottle: selectedBottle }
+      })
     }
   }
 
@@ -42,6 +59,10 @@ class ControllerContainer extends Component {
     }))
     this.setState({ drinks: drinks, bottles: bottles })
     this.setState({ hasLoaded: true })
+
+    // const endpoint = process.env.REACT_APP_SOCKETIO_ENDPOINT
+    // const socket = io(endpoint)
+    // socket.on("news", data => console.log(data))
   }
 
   render() {

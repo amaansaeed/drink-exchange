@@ -1,19 +1,20 @@
 //  Dependencies
 const express = require("express")
+const app = express()
 const morgan = require("morgan")
 const cors = require("cors")
 const path = require("path")
 const helmet = require("helmet")
+const server = require("http").createServer(app)
+const io = require("socket.io")(server)
 require("dotenv").config()
 
 //  Routes
-const apiRoutes = require("./routes/apiRoutes")
+const apiRoutesGet = require("./routes/apiRoutes/getRoutes")
+const apiRoutesPost = require("./routes/apiRoutes/postRoutes")
 
 //  Connect to MongoDB
 require("./controllers/connect")
-
-//  Express
-const app = express()
 
 //  Middleware
 app.use(express.json()) // to support JSON-encoded bodies
@@ -26,14 +27,22 @@ app.use(cors())
 // app.use(express.static(path.join(__dirname, "../client/build")))
 
 //  API Routing
-app.use("/api/v1", apiRoutes)
+app.use("/api/v1", apiRoutesGet)
+app.use("/api/v1", apiRoutesPost)
+
+//  socket.io
+io.on("connection", socket => {
+  console.log("socket.io connected...")
+  io.emit("news", { hello: "world" })
+})
 
 //  Port & Listener
 app.set("port", process.env.PORT)
 
-app.listen(app.get("port"), () =>
+//  listening through socket.io and indirectly express
+server.listen(app.get("port"), () => {
   console.log(`Drink-Exchange server listening on port: ${app.get("port")}`)
-)
+})
 
 //  DEVELOPMENT
 // require("./seed/seed")

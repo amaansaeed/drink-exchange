@@ -2,15 +2,25 @@
 const Drinks = require("../models/drinks")
 const Bottles = require("../models/bottles")
 
-const sellBottle = () => {
+const sellBottle = bottle => {
   return new Promise(resolve => {
-    resolve()
+    Bottles.findOne({ title: bottle }, (err, res) => {
+      if (err) throw err
+      Bottles.findOneAndUpdate({ title: bottle }, { stock: res.stock + 1 }, (err, res) => {
+        resolve()
+      })
+    })
   })
 }
 
-const buyDrink = () => {
+const buyDrink = drink => {
   return new Promise(resolve => {
-    resolve()
+    Drinks.findOne({ title: drink }, (err, res) => {
+      if (err) throw err
+      Drinks.findOneAndUpdate({ title: drink }, { sold: res.sold + 1 }, (err, res) => {
+        resolve()
+      })
+    })
   })
 }
 
