@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import http from "../services/http"
-import io from "socket.io-client"
 
 //  components
 import Controller from "../components/Controller"
@@ -18,7 +17,6 @@ class ControllerContainer extends Component {
     const { selectedDrink, selectedBottle } = this.state
 
     if (selection === "buy" && selectedDrink.length > 1) {
-      console.log(`Buy drink: ${selectedDrink}`)
       http({
         method: "post",
         baseURL: process.env.REACT_APP_API_ENDPOINT,
@@ -27,7 +25,6 @@ class ControllerContainer extends Component {
         data: { drink: selectedDrink }
       })
     } else if (selection === "sell" && selectedBottle.length > 1) {
-      console.log(`Sell bottle: ${selectedBottle}`)
       http({
         method: "post",
         baseURL: process.env.REACT_APP_API_ENDPOINT,
@@ -59,10 +56,6 @@ class ControllerContainer extends Component {
     }))
     this.setState({ drinks: drinks, bottles: bottles })
     this.setState({ hasLoaded: true })
-
-    // const endpoint = process.env.REACT_APP_SOCKETIO_ENDPOINT
-    // const socket = io(endpoint)
-    // socket.on("news", data => console.log(data))
   }
 
   render() {

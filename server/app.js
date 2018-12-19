@@ -16,12 +16,22 @@ const apiRoutesPost = require("./routes/apiRoutes/postRoutes")
 //  Connect to MongoDB
 require("./controllers/connect")
 
+//  socket.io
+io.on("connection", socket => {
+  console.log("socket.io: new user connected...")
+  io.emit("news", { hello: "world" })
+})
+
 //  Middleware
 app.use(express.json()) // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })) // to support URL-encoded bodies
 app.use(morgan("tiny")) // request logger
 app.use(helmet()) //  third-party middleware
 app.use(cors())
+app.use((req, res, next) => {
+  req.io = io
+  next()
+})
 
 // Serve the static files from the React app
 // app.use(express.static(path.join(__dirname, "../client/build")))
@@ -29,12 +39,6 @@ app.use(cors())
 //  API Routing
 app.use("/api/v1", apiRoutesGet)
 app.use("/api/v1", apiRoutesPost)
-
-//  socket.io
-io.on("connection", socket => {
-  console.log("socket.io connected...")
-  io.emit("news", { hello: "world" })
-})
 
 //  Port & Listener
 app.set("port", process.env.PORT)

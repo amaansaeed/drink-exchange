@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react"
 import styled from "styled-components"
+import io from "socket.io-client"
 
 //  containers & components
 import Header from "../containers/HeaderContainer"
@@ -14,14 +15,27 @@ const Wrapper = styled.div`
   grid-template-columns: auto auto auto;
 `
 
+//  env variables
+const endpoint = process.env.REACT_APP_SOCKETIO_ENDPOINT
+
 class Dashboard extends Component {
+  state = {}
+
+  componentDidMount = () => {
+    this.setState({ socket: io(endpoint) })
+  }
+
+  componentWillUnmount = () => {
+    this.state.socket.close()
+  }
+
   render() {
     return (
       <Fragment>
         <Header />
         <Wrapper>
-          <Drinks />
-          <Bottles />
+          <Drinks socket={this.state.socket} />
+          <Bottles socket={this.state.socket} />
           <Controller />
         </Wrapper>
       </Fragment>

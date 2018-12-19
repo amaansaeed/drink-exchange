@@ -17,6 +17,12 @@ class BottlesContainer extends Component {
     })
     this.setState({ bottles: response.data })
     this.setState({ hasLoaded: true })
+
+    this.props.socket.on("updateBottles", data => this.setState({ bottles: data.bottles }))
+  }
+
+  componentWillUnmount = () => {
+    this.props.socket.off("updateBottles", data => this.setState({ bottles: data.bottles }))
   }
   render() {
     return <Bottles {...this.state} />

@@ -17,6 +17,11 @@ class DrinksContainer extends Component {
     })
     this.setState({ drinks: response.data })
     this.setState({ hasLoaded: true })
+
+    this.props.socket.on("updateDrinks", data => this.setState({ drinks: data.drinks }))
+  }
+  componentWillUnmount = () => {
+    this.props.socket.off("updateDrinks", data => this.setState({ drinks: data.drinks }))
   }
   render() {
     return <Drinks {...this.state} />
