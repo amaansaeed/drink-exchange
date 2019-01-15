@@ -56,7 +56,7 @@ const Button = styled.div`
 const Controller = props => {
   return (
     <Wrapper>
-      <Title>Controller</Title>
+      <Title>Trade</Title>
       <Hr />
       <Section>
         <Heading>Buy Drinks</Heading>

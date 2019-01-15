@@ -1,8 +1,10 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 //  styled components
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  font-size: 14px;
+`
 
 const Title = styled.div`
   text-align: center;
@@ -26,7 +28,7 @@ const Drink = styled.div`
 
   padding: 5px 0px;
 
-  color: darkgrey;
+  color: slategray;
 `
 
 const Name = styled.div`
@@ -58,7 +60,7 @@ const Drinks = props => {
       <Content>
         <Heading>
           <Name>Drink</Name>
-          <Code>Code</Code>
+          <Code>Ticker</Code>
           <Sold>Sold</Sold>
           <Price>Price</Price>
         </Heading>

@@ -1,0 +1,168 @@
+{
+  "drinks": [
+    {
+      "title": "gin & tonic",
+      "code": "GNT",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "gin",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "title": "margerita",
+      "code": "MARG",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "cuba libre",
+      "code": "CULI",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "rum",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "title": "old fashioned",
+      "code": "OFASH",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "whiskey",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "martini",
+      "code": "MART",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "moscow mule",
+      "code": "MULE",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "manhattan",
+      "code": "MHAT",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "cosmopolitan",
+      "code": "CSMO",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "mojito",
+      "code": "MOTO",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "bloody mary",
+      "code": "BMAR",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "title": "mimosa",
+      "code": "MIM",
+      "price": 5.0,
+      "sold": 0,
+      "alcohol": [
+        {
+          "title": "tequila",
+          "quantity": "2"
+        }
+      ]
+    }
+  ],
+  "bottles": [
+    {
+      "title": "Absolut Vodka",
+      "type": "Vodka",
+      "stock": 20,
+      "price": 23.45
+    },
+    {
+      "title": "Captain Morgan",
+      "type": "Rum",
+      "stock": 20,
+      "price": 23.45
+    },
+    {
+      "title": "Johnny Walker - Black Label",
+      "type": "Whiskey",
+      "stock": 20,
+      "price": 23.45
+    },
+    {
+      "title": "London Dry Gin",
+      "type": "Gin",
+      "stock": 20,
+      "price": 23.45
+    },
+    {
+      "title": "El Jimador",
+      "type": "Tequila",
+      "stock": 20,
+      "price": 23.45
+    }
+  ]
+}

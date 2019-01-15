@@ -27,7 +27,7 @@ const Header = props => {
   return (
     <Fragment>
       <Wrapper>
-        <Title>Drink Exchange</Title>
+        <Title>- Drink Exchange -</Title>
       </Wrapper>
 
       <Space />

@@ -2,7 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 //  styled components
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  font-size: 14px;
+`
 
 const Title = styled.div`
   text-align: center;
@@ -26,7 +28,7 @@ const Bottle = styled.div`
 
   padding: 5px 0px;
 
-  color: darkgrey;
+  color: slategray;
 `
 
 const Name = styled.div`
