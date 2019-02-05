@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "drink-exchange",
   "version": "1.0.0",
-  "description": "drink exchange back-end",
+  "description": "drink exchange app",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
