@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
+//  container
+import Container from "../containers/BottlesContainer"
+
 //  styled components
 const Wrapper = styled.div`
   font-size: 14px;
@@ -52,7 +55,7 @@ const Heading = styled(Bottle)`
   }
 `
 
-const Bottles = props => {
+const Bottles = ({bottles}) => {
   return (
     <Wrapper>
       <Title>Bottles</Title>
@@ -64,9 +67,9 @@ const Bottles = props => {
           <Stock>Stock</Stock>
           <Price>Price</Price>
         </Heading>
-        {!props.hasLoaded
+        {!bottles
           ? null
-          : props.bottles.map((bottle, i) => (
+          : bottles.map((bottle, i) => (
               <Bottle key={i}>
                 <Name>{bottle.title}</Name>
                 <Type>{bottle.type}</Type>
@@ -79,4 +82,4 @@ const Bottles = props => {
   )
 }
 
-export default Bottles
+export default Container(Bottles)

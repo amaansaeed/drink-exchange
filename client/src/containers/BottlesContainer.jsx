@@ -1,32 +1,18 @@
-import React, { Component } from "react"
-import http from "../services/http"
+import React, { Component } from 'react'
+import {connect} from "react-redux"
 
-//  components
-import Bottles from "../components/Bottles"
-
-class BottlesContainer extends Component {
-  state = {
-    hasLoaded: false,
-    bottles: []
-  }
-  componentDidMount = async () => {
-    const response = await http({
-      method: "get",
-      baseURL: process.env.REACT_APP_API_ENDPOINT,
-      url: "/bottles"
-    })
-    this.setState({ bottles: response.data })
-    this.setState({ hasLoaded: true })
-
-    this.props.socket.on("updateBottles", data => this.setState({ bottles: data.bottles }))
+const Wrapper = WrappedComponent => {
+  class BottlesContainer extends Component {
+    render() {
+      return <WrappedComponent {...this.props} />
+    }
   }
 
-  componentWillUnmount = () => {
-    this.props.socket.off("updateBottles", data => this.setState({ bottles: data.bottles }))
-  }
-  render() {
-    return <Bottles {...this.state} />
-  }
+  const mapStateToProps = state => ({
+    bottles: state.bottles
+  })
+
+  return connect(mapStateToProps)(BottlesContainer)
 }
 
-export default BottlesContainer
+export default Wrapper

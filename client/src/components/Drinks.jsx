@@ -1,6 +1,9 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 
+//  containers
+import Container from "../containers/DrinksContainer"
+
 //  styled components
 const Wrapper = styled.div`
   font-size: 14px;
@@ -52,7 +55,7 @@ const Heading = styled(Drink)`
   }
 `
 
-const Drinks = props => {
+const Drinks = ({drinks}) => {
   return (
     <Wrapper>
       <Title>Drinks</Title>
@@ -64,9 +67,9 @@ const Drinks = props => {
           <Sold>Sold</Sold>
           <Price>Price</Price>
         </Heading>
-        {!props.hasLoaded
+        {!drinks
           ? null
-          : props.drinks.map((drink, i) => (
+          : drinks.map((drink, i) => (
               <Drink key={i}>
                 <Name>{drink.title}</Name>
                 <Code>{drink.code}</Code>
@@ -79,4 +82,4 @@ const Drinks = props => {
   )
 }
 
-export default Drinks
+export default Container(Drinks)

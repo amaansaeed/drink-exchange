@@ -2,6 +2,9 @@ import React from "react"
 import ReactSelect from "react-select"
 import styled from "styled-components"
 
+//  container
+import Container from "../containers/ControllerContainer"
+
 //  styled-components
 const Wrapper = styled.div`
   text-align: center;
@@ -64,7 +67,7 @@ const Controller = props => {
           <Select name="drinks" onChange={props.selectDrink} options={props.drinks} />
         </Dropdown>
         <Button>
-          <button onClick={() => props.handleClick("buy")}>Buy</button>
+          <button name="buy" onClick={props.handleClick}>Buy</button>
         </Button>
       </Section>
 
@@ -74,11 +77,11 @@ const Controller = props => {
           <Select name="bottles" onChange={props.selectBottle} options={props.bottles} />
         </Dropdown>
         <Button>
-          <button onClick={() => props.handleClick("sell")}>Sell</button>
+          <button name="sell" onClick={props.handleClick}>Sell</button>
         </Button>
       </Section>
     </Wrapper>
   )
 }
 
-export default Controller
+export default Container(Controller)
