@@ -47,6 +47,9 @@ app.use(
   '/static',
   express.static(path.join(__dirname, './client/build/static'))
 )
+app.get('/favicon.ico', function(req, res) {
+  res.sendFile('favicon.ico', { root: path.join(__dirname, './client/build/') })
+})
 app.get('*', function(req, res) {
   res.sendFile('index.html', { root: path.join(__dirname, './client/build/') })
 })
