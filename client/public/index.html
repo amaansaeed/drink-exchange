@@ -28,4 +28,18 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <!-- firebase config -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: 'AIzaSyCtRMlRge44F6G5M2gE5QorncBbAhO-qxY',
+      authDomain: 'drink-exchange-e0ede.firebaseapp.com',
+      databaseURL: 'https://drink-exchange-e0ede.firebaseio.com',
+      projectId: 'drink-exchange-e0ede',
+      storageBucket: 'drink-exchange-e0ede.appspot.com',
+      messagingSenderId: '815140808096'
+    }
+    firebase.initializeApp(config)
+  </script>
 </html>
